@@ -1,32 +1,42 @@
 from datetime import datetime
 import time
 import random,os
-import pygame
+from termcolor import colored
 
-#secret_word_list = ["KOLTUK", "ARABA", "UÇAK", "TEPSİ", "SİHİRBAZ"]
 secret_word_list = []
 guess_list=[]
 guessed=False
 mistakes=0
+
+def intro():
+   os.system('clear')
+   print("| | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  ")
+   print("| |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ ")
+   print("|  _  | (_| | | | | (_| | | | | | | (_| | | | |")
+   print("|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|")
+   print("                   |___/                        ")
+#   print(termcolor.COLORS)
+   time.sleep(2)
+
 def draw_hangman(mistakes):
-   print("__________")
-   print("|        |")
+   print(colored("__________",'yellow'))
+   print(colored("|        |",'yellow'))
    if mistakes >= 1:
-      print("|        @")
+      print(colored("|        @",'yellow'))
    else:
-      print("|        ")
+      print(colored("|        ",'yellow'))
    if mistakes >= 2:
-      print("|       /|\ ")
+      print(colored("|       /|\ ",'yellow'))
    else:
-      print("|        ")
+      print(colored("|        ",'yellow'))
    if mistakes >= 3:
-      print("|        |")
+      print(colored("|        |",'yellow'))
    else:
-      print("|        ")
+      print(colored("|        ",'yellow'))
    if mistakes >= 4:
-      print("|       / \\")
+      print(colored("|       / \\",'yellow'))
    else:
-      print("|        ")
+      print(colored("|        ",'yellow'))
    print("")
 
 def print_secret_word():
@@ -51,9 +61,10 @@ def print_secret_word():
 
 def print_guesses():
     print("yaptığınız tahminler: ")
-    print(guess_list)
+    print(colored(guess_list,'green'))
 
 #program starts here...
+intro()
 start_time=datetime.now()
 f=open('wordList.txt')
 secret_word_list=f.read().splitlines()
