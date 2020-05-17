@@ -12,7 +12,7 @@ guessed=False
 #the mistakes counter.. if it is 4 than all tries have been done
 mistakes=0
 
-#write Hangman text to the terminal screen for 2 seconds..
+#write BIG  Hangman text to the terminal screen for 2 seconds..
 def intro():
    os.system('clear')
    print("| | | | __ _ _ __   __ _ _ __ ___   __ _ _ __  ")
