@@ -8,4 +8,11 @@ prerequisites
 to run the game: <br>
 `python3 hangman.py`
 
+if you want to run this game within docker, it is possbile Now!
+* first build docker image by
+`docker build -t hangman-app `
+
+* run docker container
+`docker -it --rm hangman-app`
+
 Enjoy!
