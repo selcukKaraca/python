@@ -5,5 +5,7 @@ prerequisites
 * download 2 files: hangman.py and wordList.txt
 * install the required libbraries if you don't have already
 
-to run the game:
+to run the game: <br>
 `python3 hangman.py`
+
+Enjoy!
