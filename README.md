@@ -3,7 +3,7 @@ wordList.txt includes the words. You can customize it as you wish
 
 prerequisites
 * download 2 files: hangman.py and wordList.txt
-* install the required libbraries if you don't have already (possibly only termcolor by `pip install termcolor`)
+* install the required libbraries if you don't have already (possibly only termcolor by `pip3 install termcolor`)
 
 to run the game: <br>
 `python3 hangman.py`
