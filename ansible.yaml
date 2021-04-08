@@ -1,0 +1,9 @@
+---
+- name: my ansible testt playbook
+  hosts: all
+  remote_user: ali
+  gather_facts: false
+
+  tasks:
+  - name: be happy
+    command: echo "be happy"
